@@ -11,6 +11,7 @@
 
 ## Tabla de contenidos
 
+0. [Reparto del trabajo del equipo](#0-reparto-del-trabajo-del-equipo)
 1. [Objetivos](#1-objetivos)
 2. [Equipos, materiales, programas y recursos](#2-equipos-materiales-programas-y-recursos)
 3. [Seguridad](#3-seguridad)
@@ -31,6 +32,103 @@
 ---
 
 ![Logo TECSUP](imagenes/fig01_image35.png)
+
+---
+
+## 0. Reparto del trabajo del equipo
+
+> **Repositorio:** https://github.com/RXDG2908/ps_lab03d · **Branch de trabajo actual:** `sprint-1`
+> **Leyenda:** ✅ = ya está hecho y subido al remoto · ⏳ = pendiente
+
+### Roles
+
+| Persona | Rol | Responsabilidad general |
+|---|---|---|
+| **Renzo** (`RXDG2908`) | **Responsable** | Dueño del repositorio, crea y publica los branches, hace los merges hacia `main` y genera los tags |
+| **Lucas** | Colaborador | Capa de negocio y acceso a datos (`services`, `repositories`) |
+| **Darío** | Colaborador | Capa de dominio (`entities`) y evidencias de sincronización |
+
+---
+
+### Estado del laboratorio
+
+#### 6.1 Creación del proyecto Java con Maven — ✅ COMPLETADO (Renzo)
+
+| Paso | Estado | Detalle |
+|---|---|---|
+| 6.1.1 Crear repositorio `ps_lab03d` en GitHub | ✅ | captura en `capturas/paso1_repositorio_github.png` |
+| 6.1.2 Dar permisos de colaboración a Lucas y Darío | ✅ | |
+| 6.1.4 Crear proyecto Maven | ✅ | commit `52e8f6d` · JDK 17 (`e0530b8`) |
+| 6.1.5 Clase `Application` | ✅ | `lab03/src/main/java/pe/edu/tecsup/lab03/Application.java` |
+| 6.1.6 `add` + `commit` | ✅ | commit `240bc66` "first commit" |
+| 6.1.8 `push` a `main` | ✅ | `origin/main` |
+| `.gitignore` de Maven | ✅ | commit `48740b8` |
+
+#### 6.1.3 / 6.1.9 Clonar el proyecto — ⏳ PENDIENTE (Lucas y Darío)
+
+Cada colaborador debe clonar el repositorio y dejar constancia con captura:
+
+```bash
+git clone https://github.com/RXDG2908/ps_lab03d.git
+```
+
+#### 6.2 Branch `sprint-1`
+
+| Paso | Encargado | Estado |
+|---|---|---|
+| 6.2.1 Crear branch `sprint-1` | Renzo | ✅ |
+| 6.2.3 Publicar `sprint-1` en el remoto (`push -u`) | Renzo | ✅ `origin/sprint-1` |
+| 6.2.2 Volver a `main` | Renzo | ✅ |
+| 6.2.4 Bajar el branch `sprint-1` (`fetch` + `checkout`) | Lucas y Darío | ⏳ |
+| 6.2.6 Crear `StudentController` + pull + push | Renzo | ✅ commit `3badf5f` |
+| 6.2.5 Crear `StudentService` | **Lucas** | ⏳ |
+| 6.2.5 Crear `StudentRepository` | **Lucas** | ⏳ |
+| 6.2.5 Crear `StudentEntity` | **Darío** | ⏳ |
+| 6.2.7 Pull final y verificar que no hay diferencias | Lucas y Darío | ⏳ |
+
+**Detalle de las clases pendientes de `sprint-1`**
+
+| Clase | Paquete completo | Encargado | Estado |
+|---|---|---|---|
+| `StudentController` | `pe.edu.tecsup.lab03.controllers` | Renzo | ✅ |
+| `StudentService` | `pe.edu.tecsup.lab03.services` | Lucas | ⏳ |
+| `StudentRepository` | `pe.edu.tecsup.lab03.repositories` | Lucas | ⏳ |
+| `StudentEntity` | `pe.edu.tecsup.lab03.entities` | Darío | ⏳ |
+
+> **Darío** además debe capturar el diálogo **Push Rejected** y el **Merge** de resolución (fig. 35), porque es la evidencia que pide la rúbrica sobre sincronización.
+
+#### 6.3 Merge `main` ← `sprint-1` — ⏳ PENDIENTE (Renzo)
+
+Solo cuando Lucas y Darío hayan subido sus cuatro clases a `sprint-1`.
+
+#### 6.4 Tag `v1.0.0` — ⏳ PENDIENTE (Renzo)
+
+Crear el tag **posicionado en `main`**, no en `sprint-1`, y subirlo al remoto.
+
+---
+
+### 7. Ejercicio adicional calificado — Branch `sprint-2` (⏳ todo pendiente)
+
+| Paso | Encargado |
+|---|---|
+| 7.1 Crear y publicar el branch `sprint-2` | Renzo |
+| Bajar el branch `sprint-2` | Lucas y Darío |
+| Modificar `StudentService` y `StudentRepository` | Lucas |
+| Modificar `StudentEntity` | Darío |
+| Modificar `StudentController` | Renzo |
+| Pull + merge + push en `sprint-2` | Renzo |
+| Verificar que no hay diferencias | Lucas y Darío |
+| 7.2 Merge `main` ← `sprint-2` y push | Renzo |
+| Generar y subir el tag `v1.1.0` | Renzo |
+
+---
+
+### Regla de trabajo del equipo
+
+1. Nadie hace commits directamente sobre `main`: todo el trabajo va en `sprint-1` y luego `sprint-2`.
+2. Antes de cada `push`, siempre `pull` primero (evita el error *Push Rejected*).
+3. Cada quien toca únicamente sus propias clases para no generar conflictos.
+4. Cada integrante guarda sus capturas en la carpeta `capturas/` con su nombre en el archivo.
 
 ---
 
