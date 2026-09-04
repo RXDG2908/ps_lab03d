@@ -1329,3 +1329,31 @@ push origin --tags  ------------------------->  pull + fetch --tags
 ---
 
 *Documento generado a partir del análisis completo de `GLAB-S03-2026-02-1.docx` — texto íntegro transcrito, 4 tablas reconstruidas y las 46 imágenes extraídas y analizadas una por una.*
+
+---
+
+## Anexo D — Evidencias reales del equipo
+
+![Branches del repositorio](capturas/evidencia_branches.png)
+
+*Branches `main`, `sprint-1` y `sprint-2` en el repositorio remoto.*
+
+![Merge de sprint-2 con conflicto resuelto](capturas/evidencia_merge_conflicto.png)
+
+*Commit de merge `b5b3b48`, con el conflicto en `StudentController.java` resuelto.*
+
+![Clases del proyecto](capturas/evidencia_clases_proyecto.png)
+
+*Estructura final del proyecto con las 4 clases: `StudentController`, `StudentService`, `StudentRepository`, `StudentEntity`.*
+
+![Tags v1.0.0 y v1.1.0](capturas/evidencia_tags_github.png)
+
+*Tags `v1.0.0` y `v1.1.0` publicados en GitHub.*
+
+![Creación del tag v1.0.0 por terminal](capturas/evidencia_tag_v1.0.0_terminal.png)
+
+*Comandos usados para crear y subir el tag `v1.0.0`.*
+
+![Conclusiones del laboratorio](capturas/evidencia_conclusiones.png)
+
+*Sección de conclusiones ya completada.*
