@@ -1004,6 +1004,10 @@ git fetch --tags
 2. _______________________________________________
 3. _______________________________________________
 
+1. El uso de branches permite separar el trabajo de cada funcionalidad sin afectar directamente la rama principal.
+2. Los merges integran los cambios de los colaboradores en `main`, conservando un historial de trabajo trazable.
+3. Los tags identifican versiones estables del proyecto y facilitan su publicación y recuperación desde el repositorio remoto.
+
 *(Sección a completar por el alumno. Vale 2 puntos en la rúbrica y se descuenta 1 punto por errores de ortografía y redacción.)*
 
 ---
