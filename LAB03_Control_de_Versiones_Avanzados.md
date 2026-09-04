@@ -11,7 +11,7 @@
 
 ## Tabla de contenidos
 
-0. [Reparto del trabajo del equipo](#0-reparto-del-trabajo-del-equipo)
+0. [Datos de entrega y trabajo del equipo](#0-datos-de-entrega-y-trabajo-del-equipo)
 1. [Objetivos](#1-objetivos)
 2. [Equipos, materiales, programas y recursos](#2-equipos-materiales-programas-y-recursos)
 3. [Seguridad](#3-seguridad)
@@ -28,6 +28,7 @@
 10. [Anexo A — Catálogo completo de imágenes analizadas](#anexo-a--catálogo-completo-de-imágenes-analizadas)
 11. [Anexo B — Chuleta de comandos Git equivalentes](#anexo-b--chuleta-de-comandos-git-equivalentes)
 12. [Anexo C — Observaciones y hallazgos del análisis](#anexo-c--observaciones-y-hallazgos-del-análisis)
+13. [Anexo D — Evidencias reales del equipo](#anexo-d--evidencias-reales-del-equipo)
 
 ---
 
@@ -35,100 +36,114 @@
 
 ---
 
-## 0. Reparto del trabajo del equipo
+## 0. Datos de entrega y trabajo del equipo
 
-> **Repositorio:** https://github.com/RXDG2908/ps_lab03d · **Branch de trabajo actual:** `sprint-1`
-> **Leyenda:** ✅ = ya está hecho y subido al remoto · ⏳ = pendiente
+> **Repositorio:** https://github.com/RXDG2908/ps_lab03d
+> **Branch principal:** `main` · **Branches de trabajo:** `sprint-1`, `sprint-2` · **Tags:** `v1.0.0`, `v1.1.0`
+> **Fecha de entrega:** 03/09/2026 · **Sección:** D · **Periodo:** 2026-II
 
-### Roles
+### Integrantes
 
-| Persona | Rol | Responsabilidad general |
-|---|---|---|
-| **Renzo** (`RXDG2908`) | **Responsable** | Dueño del repositorio, crea y publica los branches, hace los merges hacia `main` y genera los tags |
-| **Lucas** | Colaborador | Capa de negocio y acceso a datos (`services`, `repositories`) |
-| **Darío** | Colaborador | Capa de dominio (`entities`) y evidencias de sincronización |
+| Integrante | Usuario Git | Rol | Aporte principal |
+|---|---|---|---|
+| **Renzo** | `Renzuky` / `RXDG2908` | **Responsable** | Repositorio, proyecto Maven, branches `sprint-1` y `sprint-2`, `StudentController`, documentación |
+| **Lucas Inga** | `Lucas Inga` | Colaborador | Correcciones del informe, capturas de branches/merge/tags, Anexo D |
+| **Darío Maza** | `DMaza15` | Colaborador | Capas `StudentService`, `StudentRepository`, `StudentEntity`, merge de `sprint-2` y conclusiones |
+
+### Cronología del trabajo (historial real de Git)
+
+Todos los integrantes participaron desde el inicio del laboratorio. Fechas tomadas del historial del repositorio (`git log`), 03/09/2026:
+
+| Hora | Integrante | Commit | Trabajo realizado | Estado |
+|---|---|---|---|---|
+| 13:40 | Renzo | `240bc66` | `first commit` — proyecto inicial subido a `main` | **Listo** |
+| 14:01 | Renzo | `2162541` | Captura del repositorio creado en GitHub | **Listo** |
+| 14:30 | **Lucas** | `52e8f6d` | Estructura inicial del proyecto Maven | **Listo** |
+| 14:38 | Renzo | `e0530b8` | Corrección de la configuración a JDK 17 | **Listo** |
+| 15:23 | **Darío** | `48740b8` | `.gitignore` para los archivos generados por Maven | **Listo** |
+| 21:12 | Renzo | `3badf5f` | Clase `StudentController` en el branch `sprint-1` | **Listo** |
+| 21:15 | Renzo | `76d0ab6` | Reparto de trabajo y estado de avance en el informe | **Listo** |
+| 22:00 | **Darío** | `7796626` | Capas `StudentService`, `StudentRepository` y `StudentEntity` en `sprint-2` | **Listo** |
+| 22:02 | **Darío** | `b5b3b48` | Merge de `sprint-2` hacia `main`, resolviendo el conflicto de `StudentController.java` | **Listo** |
+| 22:20 | **Lucas** | `e446f5e` | Corrección de la sección de conclusiones | **Listo** |
+| 22:27 | **Lucas** | `6e02446` | Capturas de branches, merge, tags y conclusiones | **Listo** |
+| 22:32 | **Lucas** | `45b4a08` | Anexo D con las evidencias del equipo | **Listo** |
+| 22:33 | **Lucas** | `7ce1924` | Normalización de los nombres de las capturas | **Listo** |
+
+**Resumen de aportes:** Renzo 5 commits · Lucas 5 commits · Darío 3 commits (incluido el merge de integración). El trabajo se distribuyó en dos jornadas: la configuración del proyecto por la tarde (13:40–15:23) y la implementación de las capas, el merge, los tags y la documentación por la noche (21:12–22:33).
 
 ---
 
-### Estado del laboratorio
+### Estado del laboratorio — COMPLETADO
 
-#### 6.1 Creación del proyecto Java con Maven — ✅ COMPLETADO (Renzo)
+> **Leyenda:** **Listo** = paso ejecutado y subido al repositorio remoto, con su commit como evidencia
 
-| Paso | Estado | Detalle |
+#### 6.1 Creación del proyecto Java con Maven — **Listo**
+
+| Paso | Estado | Evidencia |
 |---|---|---|
-| 6.1.1 Crear repositorio `ps_lab03d` en GitHub | ✅ | captura en `capturas/paso1_repositorio_github.png` |
-| 6.1.2 Dar permisos de colaboración a Lucas y Darío | ✅ | |
-| 6.1.4 Crear proyecto Maven | ✅ | commit `52e8f6d` · JDK 17 (`e0530b8`) |
-| 6.1.5 Clase `Application` | ✅ | `lab03/src/main/java/pe/edu/tecsup/lab03/Application.java` |
-| 6.1.6 `add` + `commit` | ✅ | commit `240bc66` "first commit" |
-| 6.1.8 `push` a `main` | ✅ | `origin/main` |
-| `.gitignore` de Maven | ✅ | commit `48740b8` |
+| 6.1.1 Crear repositorio `ps_lab03d` en GitHub | **Listo** | `capturas/paso1_repositorio_github.png` |
+| 6.1.2 / 6.1.3 Permisos de colaboración a Lucas y Darío | **Listo** | commits de ambos en el historial |
+| 6.1.4 Crear proyecto Maven (JDK 17) | **Listo** | commits `52e8f6d`, `e0530b8` |
+| 6.1.5 Clase `Application` | **Listo** | `capturas/evidencia_estructura_inicial.png` |
+| 6.1.6 `add` + `commit` | **Listo** | commit `240bc66` "first commit" |
+| 6.1.8 `push` a `main` | **Listo** | `origin/main` |
+| 6.1.9 Clonado por los colaboradores | **Listo** | commits de `Lucas Inga` y `DMaza15` |
+| `.gitignore` de Maven | **Listo** | commit `48740b8` |
 
-#### 6.1.3 / 6.1.9 Clonar el proyecto — ⏳ PENDIENTE (Lucas y Darío)
+#### 6.2 Branch `sprint-1` — **Listo**
 
-Cada colaborador debe clonar el repositorio y dejar constancia con captura:
+| Paso | Encargado | Estado | Evidencia |
+|---|---|---|---|
+| 6.2.1 Crear branch `sprint-1` | Renzo | **Listo** | `capturas/evidencia_branches.png` |
+| 6.2.2 Conmutar a `main` | Renzo | **Listo** | |
+| 6.2.3 Publicar `sprint-1` en el remoto | Renzo | **Listo** | `origin/sprint-1` |
+| 6.2.4 Bajar el branch `sprint-1` | Lucas y Darío | **Listo** | |
+| 6.2.6 Crear `StudentController` + pull + push | Renzo | **Listo** | commit `3badf5f` |
+| 6.2.7 Sincronización y verificación | Lucas y Darío | **Listo** | |
 
-```bash
-git clone https://github.com/RXDG2908/ps_lab03d.git
-```
+#### 6.3 Merge hacia `main` — **Listo**
 
-#### 6.2 Branch `sprint-1`
+Merge `b5b3b48` realizado por Darío, con **conflicto real resuelto** en `StudentController.java`. Ver `capturas/evidencia_merge_conflicto.png`.
+
+#### 6.4 Tags — **Listo**
+
+| Tag | Commit | Tipo | Contenido |
+|---|---|---|---|
+| `v1.0.0` | `76d0ab6` | anotado | Cierre del trabajo en `sprint-1` |
+| `v1.1.0` | `b5b3b48` | anotado | Versión estable con las cuatro capas integradas en `main` |
+
+Ver `capturas/evidencia_tags_github.png` y `capturas/evidencia_tag_v1.0.0_terminal.png`.
+
+#### 7. Ejercicio adicional calificado — Branch `sprint-2` — **Listo**
 
 | Paso | Encargado | Estado |
 |---|---|---|
-| 6.2.1 Crear branch `sprint-1` | Renzo | ✅ |
-| 6.2.3 Publicar `sprint-1` en el remoto (`push -u`) | Renzo | ✅ `origin/sprint-1` |
-| 6.2.2 Volver a `main` | Renzo | ✅ |
-| 6.2.4 Bajar el branch `sprint-1` (`fetch` + `checkout`) | Lucas y Darío | ⏳ |
-| 6.2.6 Crear `StudentController` + pull + push | Renzo | ✅ commit `3badf5f` |
-| 6.2.5 Crear `StudentService` | **Lucas** | ⏳ |
-| 6.2.5 Crear `StudentRepository` | **Lucas** | ⏳ |
-| 6.2.5 Crear `StudentEntity` | **Darío** | ⏳ |
-| 6.2.7 Pull final y verificar que no hay diferencias | Lucas y Darío | ⏳ |
+| 7.1 Crear y publicar el branch `sprint-2` | Renzo | **Listo** |
+| Implementar `StudentService`, `StudentRepository`, `StudentEntity` | Darío | **Listo** commit `7796626` |
+| Implementar `StudentController` | Renzo | **Listo** commit `3badf5f` |
+| Merge y push de `sprint-2` | Darío | **Listo** commit `b5b3b48` |
+| 7.2 Merge `main` ← `sprint-2` y push | Darío | **Listo** |
+| Tag `v1.1.0` y publicación en GitHub | Renzo | **Listo** |
+| Conclusiones y evidencias (Anexo D) | Lucas | **Listo** commits `e446f5e`…`7ce1924` |
 
-**Detalle de las clases pendientes de `sprint-1`**
+### Clases finales del proyecto
 
-| Clase | Paquete completo | Encargado | Estado |
-|---|---|---|---|
-| `StudentController` | `pe.edu.tecsup.lab03.controllers` | Renzo | ✅ |
-| `StudentService` | `pe.edu.tecsup.lab03.services` | Lucas | ⏳ |
-| `StudentRepository` | `pe.edu.tecsup.lab03.repositories` | Lucas | ⏳ |
-| `StudentEntity` | `pe.edu.tecsup.lab03.entities` | Darío | ⏳ |
+| Clase | Paquete completo | Autor |
+|---|---|---|
+| `StudentController` | `pe.edu.tecsup.lab03.controllers` | Renzo |
+| `StudentService` | `pe.edu.tecsup.lab03.services` | Darío |
+| `StudentRepository` | `pe.edu.tecsup.lab03.repositories` | Darío |
+| `StudentEntity` | `pe.edu.tecsup.lab03.entities` | Darío |
 
-> **Darío** además debe capturar el diálogo **Push Rejected** y el **Merge** de resolución (fig. 35), porque es la evidencia que pide la rúbrica sobre sincronización.
+Arquitectura en capas **Controller → Service → Repository → Entity**, con el repositorio implementado en memoria mediante `LinkedHashMap` y operaciones CRUD (`save`, `findById`, `findAll`, `deleteById`).
 
-#### 6.3 Merge `main` ← `sprint-1` — ⏳ PENDIENTE (Renzo)
+### Reglas de trabajo aplicadas por el equipo
 
-Solo cuando Lucas y Darío hayan subido sus cuatro clases a `sprint-1`.
-
-#### 6.4 Tag `v1.0.0` — ⏳ PENDIENTE (Renzo)
-
-Crear el tag **posicionado en `main`**, no en `sprint-1`, y subirlo al remoto.
-
----
-
-### 7. Ejercicio adicional calificado — Branch `sprint-2` (⏳ todo pendiente)
-
-| Paso | Encargado |
-|---|---|
-| 7.1 Crear y publicar el branch `sprint-2` | Renzo |
-| Bajar el branch `sprint-2` | Lucas y Darío |
-| Modificar `StudentService` y `StudentRepository` | Lucas |
-| Modificar `StudentEntity` | Darío |
-| Modificar `StudentController` | Renzo |
-| Pull + merge + push en `sprint-2` | Renzo |
-| Verificar que no hay diferencias | Lucas y Darío |
-| 7.2 Merge `main` ← `sprint-2` y push | Renzo |
-| Generar y subir el tag `v1.1.0` | Renzo |
-
----
-
-### Regla de trabajo del equipo
-
-1. Nadie hace commits directamente sobre `main`: todo el trabajo va en `sprint-1` y luego `sprint-2`.
-2. Antes de cada `push`, siempre `pull` primero (evita el error *Push Rejected*).
-3. Cada quien toca únicamente sus propias clases para no generar conflictos.
-4. Cada integrante guarda sus capturas en la carpeta `capturas/` con su nombre en el archivo.
+1. Ningún commit de funcionalidad se hizo directamente sobre `main`: todo pasó por `sprint-1` o `sprint-2`.
+2. Siempre `pull` antes de `push`, para evitar el rechazo por *non-fast-forward*.
+3. Cada integrante trabajó sobre sus propias clases para reducir conflictos.
+4. Las capturas de evidencia se guardan en `capturas/` y se referencian en el Anexo D.
 
 ---
 
@@ -998,15 +1013,11 @@ git fetch --tags
 
 ## 8. Conclusiones
 
-> *Indicar las conclusiones que ha llegado después de desarrollar el laboratorio.*
-
-1. El uso de branches permite separar el trabajo de cada funcionalidad sin afectar directamente la rama principal.
-2. Los merges integran los cambios de los colaboradores en `main`, conservando un historial de trabajo trazable.
-3. Los tags identifican versiones estables del proyecto y facilitan su publicación y recuperación desde el repositorio remoto.
-
-*(Sección a completar por el alumno. Vale 2 puntos en la rúbrica y se descuenta 1 punto por errores de ortografía y redacción.)*
-
----
+1. El uso de **branches** permitió que los tres integrantes trabajaran en paralelo sobre el mismo proyecto sin bloquearse entre sí: `sprint-1` y `sprint-2` mantuvieron el desarrollo aislado mientras `main` conservaba siempre una versión funcional.
+2. El **merge** demostró su utilidad real cuando se integró `sprint-2` hacia `main`: se produjo un conflicto en la clase `StudentController.java`, porque dos integrantes habían modificado el mismo archivo. Resolverlo manualmente y conservar ambos aportes fue la parte más instructiva del laboratorio, ya que evidencia que Git no decide por el desarrollador, solo señala dónde está la diferencia.
+3. Los **tags** dieron un nombre estable a dos momentos concretos del proyecto: `v1.0.0` para el cierre del trabajo en `sprint-1` y `v1.1.0` para la versión con las cuatro capas ya integradas. A diferencia de un branch, el tag no se mueve, por lo que sirve como punto de retorno confiable.
+4. El historial de commits funciona como evidencia objetiva del trabajo del equipo: registra quién hizo cada cambio, cuándo y con qué propósito, algo imposible de reconstruir compartiendo archivos por otros medios.
+5. La disciplina de hacer **pull antes de push** evitó la mayoría de los rechazos por *non-fast-forward*, y confirmó que la sincronización frecuente es más barata que resolver conflictos acumulados.
 
 ## 9. Criterios de evaluación — Rúbrica
 
@@ -1019,13 +1030,13 @@ git fetch --tags
 | Campo | Valor |
 |---|---|
 | Curso | Construcción y Pruebas de Software |
-| Periodo | *(en blanco)* |
+| Periodo | 2026-II |
 | Actividad | Realizar control de versiones |
 | Semestre | IV |
-| Nombre del Alumno | *(en blanco)* |
+| Nombre del Alumno | Renzo (`RXDG2908`) · Lucas Inga · Darío Maza |
 | Semana | 3 |
 | Docente | Jaime Gómez |
-| Fecha / Sección | *(en blanco)* |
+| Fecha / Sección | 03/09/2026 · Sección D |
 
 ### Tabla de puntajes
 
@@ -1328,11 +1339,29 @@ push origin --tags  ------------------------->  pull + fetch --tags
 
 ---
 
+### C.6 Diferencias entre el flujo del enunciado y el flujo real del equipo
+
+Se documentan por transparencia las variaciones respecto del procedimiento descrito en el documento original:
+
+| Punto del enunciado | Lo que hizo el equipo | Efecto en el resultado |
+|---|---|---|
+| 6.2.5 — los colaboradores crean `StudentService`, `StudentRepository` y `StudentEntity` en `sprint-1` | Las tres clases se implementaron directamente en `sprint-2` (commit `7796626`) | Ninguno en el proyecto final: las cuatro clases están en `main` con la arquitectura pedida |
+| 6.3 — merge explícito `main` ← `sprint-1` | `sprint-2` se creó desde `48740b8` y el merge `b5b3b48` integró ambos branches en una sola operación | El contenido de `sprint-1` sí llegó a `main`, pero el grafo no muestra un commit de merge separado para `sprint-1` |
+| 6.4 — tag `v1.0.0` sobre `main` | `v1.0.0` marca el commit `76d0ab6`, punta de `sprint-1`, que sí es alcanzable desde `main` | El tag identifica el cierre de `sprint-1`; la versión con las cuatro capas integradas es `v1.1.0` |
+
+Se optó por **no reescribir el historial** para corregir estas diferencias, ya que hacerlo habría falseado la trazabilidad real del trabajo, que es precisamente lo que el control de versiones debe preservar.
+
+---
+
 *Documento generado a partir del análisis completo de `GLAB-S03-2026-02-1.docx` — texto íntegro transcrito, 4 tablas reconstruidas y las 46 imágenes extraídas y analizadas una por una.*
 
 ---
 
 ## Anexo D — Evidencias reales del equipo
+
+![Estructura inicial del proyecto](capturas/evidencia_estructura_inicial.png)
+
+*Estructura inicial del proyecto Maven en IntelliJ, con el paquete `pe.edu.tecsup.lab03` y las clases `Application` y `Main` antes de crear las capas (paso 6.1.5).*
 
 ![Branches del repositorio](capturas/evidencia_branches.png)
 
